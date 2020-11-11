@@ -14,15 +14,17 @@ class BirthDay {
 		System.out.println(this);
 	}
 	
-	
+	public BirthDay(int pday) {
+		day = pday;
+	}
 	
 	public static void main(String[] args) {
 		
-		BirthDay bday = new BirthDay();
-		bday.setYear(1989);
+		BirthDay bday = new BirthDay(25);
+			
 		
 		
-		System.out.println(bday);
+		System.out.println(bday.day);
 		bday.printThis();
 	}
 
