@@ -14,7 +14,7 @@ public class While1110 {
 				if(A>0 && B<10) {
 					System.out.println(A+B);
 				} else {
-					break;
+					return;
 				}
 			
 		}
