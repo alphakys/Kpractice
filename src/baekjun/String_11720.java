@@ -9,6 +9,8 @@ public class String_11720 {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		
+		
 		int N = sc.nextInt();
 		
 		sc.nextLine();
@@ -23,9 +25,7 @@ public class String_11720 {
 						arrA[i] = input.charAt(i);
 				
 							}
-	
-		System.out.println((int)arrA[0]);
-		
+		// 48= 숫자0 1씩 커진다. 48~57
 		
 		
 		int [] arrInt = new int[N];
