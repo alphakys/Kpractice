@@ -1,5 +1,7 @@
 package cooperation;
 
+
+
 public class Bus {
 		int busNum;
 		int passengerCount;
@@ -15,9 +17,17 @@ public class Bus {
 		}
 
 		
-		}
+		
 
 
+public void main(String[] args) {
+	
 
+	
+	
+	
+	
+	
+}}
 
 
