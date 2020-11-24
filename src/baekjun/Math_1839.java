@@ -8,23 +8,27 @@ public class Math_1839 {
 		
 		int N = Integer.parseInt(bf.readLine());
 		
-		int answer = (N/5) + ((N%5)/3);
+		// 3i +5j > N --- -1출력
 		
-		if(N%5==0 || N%3==0) {
-			System.out.println(answer);
+		// 3i +5j == N --- i+j 출력
+		
+		//i와 j는 0부터 시작
+		
+		//sum +=6*i(0<=i)
+		int j;
+		int sum =1;
+		for(int i=0;i<=N;i++) {
+				sum+=6*i; //1
+				System.out.print(sum+",");
+				for(j=1; j<=N;j++) {
+					sum+=6*j;
+					System.out.println(sum);
+					
+				}System.out.println(i+","+j);
+			
+			
+		
 		}
-		else if((N%5)%3==0) {
-			System.out.println(answer);
-		}
-		else {
-			System.out.println(-1);
-		}
-		
-		
-		
-		
-		bf.close();
-		
 		
 		
 	}

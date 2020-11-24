@@ -80,14 +80,33 @@ public class 연습장 {
 		
 		//Scanner는 띄어쓰기와 엔터를 경계로 입력 값을 인식한다
 		
+		Stack<Integer> stack = new Stack<>();
+		
+		stack.push(1);
+		
+		stack.push(2);
+		
+		stack.push(3);
+		
+		System.out.println(stack.pop());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}}
+	
 
 
-		
-		
-		
-		
-		
-		
-	}
-
-}
