@@ -1,9 +1,10 @@
 package baekjun;
 import java.io.*;
 import java.util.*;
+import java.io.IOException;
 public class 연습장 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 /*		
 		Random ran = new Random();
 		
@@ -79,7 +80,7 @@ public class 연습장 {
 		
 		
 		//Scanner는 띄어쓰기와 엔터를 경계로 입력 값을 인식한다
-		
+		/*
 		Stack<Integer> stack = new Stack<>();
 		
 		stack.push(1);
@@ -91,13 +92,16 @@ public class 연습장 {
 		System.out.println(stack.pop());
 		
 		
+		*/
+		/*
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		
 		
+		bw.write("1+1");
+		bw.flush();
 		
-		
-		
-		
+		*/
 		
 		
 		
