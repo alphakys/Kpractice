@@ -3,7 +3,7 @@ package cooperation;
 public class TakeTrans {
 
 	public static void main(String[] args) {
-					
+	/*				
 		Student stJames = new Student("James",5000);
 		Student stTomas = new Student("Tomas",10000);
 
@@ -16,7 +16,7 @@ public class TakeTrans {
 		stTomas.takeSubway(sub2);
 		stTomas.getStudentInfo();
 		sub2.subwayInfo();
-		
+		*/
 		
 	}
 
