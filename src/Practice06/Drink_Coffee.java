@@ -23,6 +23,13 @@ public class Drink_Coffee {
 		cafeStar.showCafeInfo();
 		
 		
+		Lee.drink(cafeBean, latte);
+		Lee.showPersonInfo();
+		cafeBean.showCafeInfo();
+		
+		
+		
+		
 		
 		
 		

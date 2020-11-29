@@ -2,8 +2,8 @@ package array;
 
 public class Book {
 
-	private String bookname;
-	private String author;
+	private  String bookname;
+	private  String author;
 	
 	
 	public Book() {}
