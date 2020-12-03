@@ -12,14 +12,14 @@ public class superLevel extends Level {
 
 	@Override
 	public void turn() {
-		System.out.println("빨리 턴해여");
+		System.out.println("매우 빨리 턴해여");
 		
 	}
 
 	@Override
 	public void jump(int count) {
 		for(int i=0;i<count;i++) {
-			System.out.println("높이 점프");
+			System.out.println("매우 높이 점프");
 			}
 		
 	}

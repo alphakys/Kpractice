@@ -9,6 +9,9 @@ public class ComputerTest {
 		
 		Computer c4 = new MyNotebook();
 		
+		c4.typing();
+		
+		
 	}
 
 }
