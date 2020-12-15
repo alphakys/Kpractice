@@ -1,4 +1,4 @@
-package javabook.practice;
+package practice;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -18,12 +18,12 @@ public class Client {
 		
 		Socket s = new Socket();
 		System.out.println("server connecting~~");
-		s.connect(new InetSocketAddress("192.168.100.15",10002));
+		s.connect(new InetSocketAddress("192.168.0.19",10002));
 		
 		
 		//입.출력 스트림
 		
-		OutputStreamWriter osw = new OutputStreamWriter(s.getOutputStream());
+		OutputStreamWriter osw = new OutputStreamWriter(s.getOutputStream(),"UTF-8");
 		BufferedWriter bw = new BufferedWriter(osw);
 		
 		InputStreamReader isr = new InputStreamReader(s.getInputStream());
@@ -39,29 +39,23 @@ public class Client {
 			if("/q".equals(msg)) {
 				break;
 			}
-			else {
+			
 				bw.write(msg);
+				bw.newLine();
 				bw.flush();
-			}
+				
+				String serverMsg = br.readLine();
+				System.out.println("Client1: "+serverMsg);
+			
 		}
 		
 		sc.close();
 		bw.close();
+		
+		s.close();
+		br.close();
 		System.out.println("클라이언트가 대화 종료");
-		
-		
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		//java javabook.practice.Client
-		
-		
+		s.close();
 		
 	}
 

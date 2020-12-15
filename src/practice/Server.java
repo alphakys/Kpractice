@@ -1,4 +1,4 @@
-package javabook.practice;
+package practice;
 
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -22,15 +22,6 @@ public class Server {
 		 * 3. 서버소켓을 일반소켓에 대입 후 클라이언트의 소켓이 연결 신청시 받아준다(accept)
 		*/
 		
-		ServerSocket ss = new ServerSocket();
-		System.out.println("서버 start");
-		ss.bind(new InetSocketAddress("192.168.100.15",10002));
-		
-		Socket s = ss.accept();
-		
-		System.out.println("server connected");
-		
-		ChattingThread ct = new ChattingThread();
 		
 		// 입.출력 스트림
 		/*
@@ -43,13 +34,27 @@ public class Server {
 		BufferedReader br = new BufferedReader(isr);
 		*/
 		
-		Thread t = new Thread(new ChattingThread());
+		
+		ServerSocket ss = new ServerSocket();
+		System.out.println("서버 start");
+		
+		ss.bind(new InetSocketAddress("192.168.0.19",10002));
+		
+		while(true) {
+		Socket s = ss.accept();
+		
+		System.out.println("server connected");
+		
+		
+		
+		Thread t = new ChattingThread(s);
 		
 		
 		t.start();
 		
+		}
 		
-		System.out.println("서버 종료");
+		//System.out.println("서버 종료");
 		
 		
 	}	
