@@ -1,51 +1,44 @@
 package baekjun;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Array_2562 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args)throws IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int[] nArr = new int[9];
+		
+		for(int i=0;i<9;i++) {
+			String str = br.readLine();
+			nArr[i]=Integer.parseInt(str);
+		}
 		
 		
-		int i;
+		int max = nArr[0];
 		
-		int[] numG = new int[9];
-		
-		for(i=0;i<numG.length;i++)
-					{
-				numG[i]	= sc.nextInt();
-					}
-		
-			int max = numG[0];
+		for(int i=0;i<9;i++) {
 			
+			if(max<nArr[i]) {
+				max = nArr[i];
+			}
 			
+		}System.out.println(max);
 		
+		for(int i=0;i<9;i++) {
 			
-			
-		for(i=0;i<numG.length;i++)
-						{
-						if(max<numG[i]) {
-										max= numG[i];
-								
-										}
-						
-						
-						
-						
-						}System.out.println(max);
+			if(nArr[i]==max) {
+				System.out.println(i+1);
+			}
 		
-						
-		for(i=0; i<numG.length;i++) {
-							
-							if(max==numG[i]) {
-								System.out.println(i+1);
-										  }
-									}				 
-				
-				
+		}
 		
-						sc.close();
+		
+		br.close();
+		
 		
 		
 	}

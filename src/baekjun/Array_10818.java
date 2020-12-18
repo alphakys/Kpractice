@@ -1,91 +1,60 @@
 package baekjun;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Array_10818 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)throws IOException {
 				
-		Scanner sc = new Scanner(System.in);
-		int i;
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int N = sc.nextInt();
+		int N = Integer.parseInt(br.readLine());
 		
-		int[] numGroup = new int[N];
+		String str = br.readLine();
 		
-		for(i=0;i<numGroup.length;i++)
-							{
-					numGroup[i] = sc.nextInt();
+		String[] strArr = str.split(" ");
 		
-							}
+		int[] numArr = new int[N];
 		
-			int max = numGroup[0];
-			int min = numGroup[0];
-		
-		
-		for(i=0;i<numGroup.length;i++)
-						{
-						if(max<numGroup[i]) 
-									{
-								max = numGroup[i];	
-									}
-					
-						} 
-		
-		for(i = 0;i<numGroup.length;i++)
-						{
-							if(min>numGroup[i]) 
-										{
-									min = numGroup[i];	
-										}
-						
-							} 
-						
-		System.out.println(max+" "+min);
-		
-		
-			sc.close();
-		
-		/*
-		for(int j:numGroup) {
-			System.out.println(j);
+		for(int i=0;i<N;i++) {
+			
+			numArr[i]= Integer.parseInt(strArr[i]);
 		}
-		/*
-		int[] array = {4,87,3,34,66,88,4312,33};
-		
-		int max = array[0];
-		int min = array[0];
 		
 		
-		
-		for(int i=0;i<array.length;i++)
-					{
-					if(max<array[i]) 
-									{
-									 max=array[i];	
-									 
-									}
-					}System.out.println(max);
+		int max = numArr[0];
+		int min = numArr[0];
 		
 		
-					
-		for(int i=0; i<array.length;i++) 
-						{
-						if(min>array[i]) {
-							min=array[i];
-								 }	
-						
-						}System.out.println(min);
+		for(int j=0;j<N;j++) {
+			
+		if(min>numArr[j]) {
+				min=numArr[j];
+			}
+			
+		}
+		System.out.print(min+" ");
 		
 		
-		*/
+		for(int j=0;j<N;j++) {
+			
+			if(max<numArr[j]) {
+				max=numArr[j];
+			}
+			
+		}
+		System.out.print(max);
 		
 		
 		
 		
 		
 		
+	
 		
+		br.close();
 		
 	}
 
