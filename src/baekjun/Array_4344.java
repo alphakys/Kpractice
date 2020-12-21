@@ -3,6 +3,7 @@ package baekjun;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Array_4344 {
 
@@ -15,40 +16,56 @@ public class Array_4344 {
 		
 		
 		String[] str;
-		int[] score=null;
+		ArrayList<Double> score = new ArrayList<>();
+		
+		
 		
 		for(int i=0;i<C;i++) {
-			str = br.readLine().split(" ");
-			score = new int[str.length];
-			score[i] = Integer.parseInt(str[i]);
-		}
+			 
+			int sum=0;
 		
+			int cnt = 0;
 		
-		
-		int sum=0;
-		for(int i=1;i<score.length;i++) {
-			sum+=score[i];
 			
+			str = br.readLine().split(" ");
+		
+
+			for(int b=0; b<str.length;b++) {
+				
+				 score.add(Double.parseDouble(str[b]));
+			}
+		
+			
+			for(int j=1;j<score.size();j++) {
+									sum+=score.get(j);
+											}
+			
+			
+			
+			double avg = (double)sum / score.get(0);
+			
+			
+			
+			
+			for(int k=0; k<score.size();k++){
+			
+			if(score.get(k)>avg) {
+							cnt++;
+								}
+			
+		
+											}
+		
+		
+		double answer =((double)cnt/ score.get(0))*100.00;
+		double answer1 =((double)cnt/ score.get(0));
+		System.out.println(answer);
+		System.out.println(answer*1000);
+		System.out.println(Math.round(answer*1000)+"%");
+			
+		score.clear();
+		
 		}
-		
-		double avg = (double)sum / (double)score[0];
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
