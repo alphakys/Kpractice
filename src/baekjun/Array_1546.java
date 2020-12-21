@@ -1,64 +1,69 @@
 package baekjun;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Array_1546 {
 
-	public static void main(String[] args) {
-			Scanner sc = new Scanner(System.in);
+	public static void main(String[] args)throws IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int N = Integer.parseInt(br.readLine());
+		
+		double[] scoreArr = new double[N];
 		
 		
-			int i;
+			String[] str = br.readLine().split(" ");
 			
+			for(int i=0;i<N;i++) {
+				scoreArr[i] = Double.parseDouble(str[i]);
 			
-			int N = sc.nextInt();
-			
-			double[] numG = new double[N];
-			
-			double max = numG[0];
-			
-			
-			for(i =0;i<numG.length;i++) 
-							{
-						numG[i] = sc.nextInt();
-							}
-		
-			
-			for(i=0;i<numG.length;i++) 
-							{
-						if(max<numG[i])
-									{
-								max = numG[i];
-									}
-							}
-			
-			double[] score = new double[N];
-			
-			for(i=0;i<numG.length;i++) 
-						{
-						score[i]= ((numG[i]/max))*100;	
-						}
-			
-			double sum = 0;
-			
-			
-			for(i=0;i<score.length;i++)
-								{
-							 sum +=score[i];	
 								}
-			   
-			System.out.println(sum/N);
 			
 			
+			double max = scoreArr[0];
 			
-			sc.close();
+			for(int i=0;i<scoreArr.length;i++) {
+				
+				if(max<scoreArr[i]) {
+					max = scoreArr[i];
+				
+				}
+				
+			}
+			
+		double[] realScore = new double[N];
+		
+		for(int i=0; i<realScore.length;i++) {
+			
+			realScore[i] = (scoreArr[i]/max)*100;
+		}
 			
 			
+		double avg;
+		double sum = 0;
+		for(int i=0; i<realScore.length;i++) {
+			
+			sum+=realScore[i];
+			
+		}
+			
+		System.out.println(sum/(double)N);
 		
 		
 		
 		
 		
+		
+		/*
+			for(int i : scoreArr) {
+			System.out.println(i);
+			}
+		*/
+
+
 	}
 
 }
